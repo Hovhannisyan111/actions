@@ -2,7 +2,7 @@ name: Show Current Time
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/10a * * * *"
 
 jobs:
   print_time:
