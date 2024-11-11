@@ -1,1 +1,13 @@
+name: Show Current Time
 
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  print_time:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Current Time
+        run: 'echo "The current time is: $(date)"'
