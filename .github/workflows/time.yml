@@ -1,8 +1,8 @@
 name: Show Current Time
 
-on:
-  schedule:
-    - cron: "*/10 * * * *"
+on: [push]
+#  schedule:
+#    - cron: "*/10 * * * *"
 
 jobs:
   print_time:
