@@ -4,10 +4,10 @@ on: [push]
 jobs:
   hello-world:
     if: github.repository == 'Hovhannisyan111/actions'
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: "Hello World"
-        run: echo "HEllo World"
+        run: echo "Hello World"
   goodbye-moon:
     runs-on: ubuntu-latest
     steps:
