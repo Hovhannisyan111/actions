@@ -3,7 +3,7 @@ name: workflow
 on: [push]
 jobs:
   hello-world:
-    if: github.repository == 'octo-org/octo-repo-prod'
+    if: github.repository == 'Hovhannisyan111/actions'
     runs-on: unbuntu-latest
     steps:
       - name: "Hello World"
