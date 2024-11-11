@@ -1,6 +1,6 @@
 name: Show Current Time
 
-on: [push]
+on:
 #  schedule:
 #    - cron: "*/10 * * * *"
 
