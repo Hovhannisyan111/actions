@@ -1,5 +1,4 @@
 GitHub Actions
 
-## Status of Last Deployment
-![PyTest](https://github.com/Hovhannisyan111/actions/workflows/PyTest/badge.svg?branch=master)
-
+Status of Last Deployment:<br>
+<img src="https://github.com/EdgarHarutyunyan2025/actions/workflows/test/badge.svg" alt="Status of Last Deployment"><br>
