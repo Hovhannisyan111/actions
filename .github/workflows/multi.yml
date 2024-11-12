@@ -17,11 +17,10 @@ jobs:
         run: |
           echo "Hello World"
           mkdir example_folder
-          echo "This is example an example" > example_folder/example.txt
+          echo "This is an example" > example_folder/example.txt
           cat example_folder/example.txt
 
-      - name: Run Python scritp
+      - name: Run Python script
         run: |
           python -c "print('This is a test script running in Github actions')"
-          python -c "print('Python version:', __import__('sys').version)
-
+          python -c "print('Python version:', __import__('sys').version)"
