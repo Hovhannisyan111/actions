@@ -20,6 +20,7 @@ jobs:
           echo "This is an example" > example_folder/example.txt
           ls -la
           cd example_folder
+          pwd
           ls
           cat example.txt
 
