@@ -18,6 +18,7 @@ jobs:
           echo "Hello World"
           mkdir example_folder
           echo "This is an example" > example_folder/example.txt
+          ls -la
           cat example_folder/example.txt
 
       - name: Run Python script
