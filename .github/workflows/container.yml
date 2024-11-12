@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: node:18
+      env:
+        NODE_ENV:  development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:volume_mount
+      optinos: --cpus 1
+    steps:
+      - name: Check for dockerenv file
+        run: (ls /.dockerenv && echo Found docekrenv) || (echo No docekrenv)
