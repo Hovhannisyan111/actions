@@ -1,0 +1,27 @@
+name: Multiline command
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  multi-line:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - neme: Run Multiple commands
+        run: |
+          echo "Hello World"
+          mkdir example_folder
+          echo "This is example an example" > example_folder/example.txt
+          cat example_folder/example.txt
+
+      - name: Run Python scritp
+        run: |
+          python -c "print('This is a test script running in Github actions')"
+          python -c "print('Python version:', __import__('sys').version)
+
