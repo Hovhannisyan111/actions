@@ -1,1 +1,3 @@
+[MESSAGES CONTROL]
+#Disable warnnings for missing docstrings
 disable=C0114, C0116
