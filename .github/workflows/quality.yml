@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Linter
-        run: pylint */*.py
+        run: pylint py_files/*.py
 
   test:
     name: Run Tests
