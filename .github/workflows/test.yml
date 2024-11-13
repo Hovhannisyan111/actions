@@ -21,4 +21,3 @@ jobs:
       - name: Failure stage
         run: | 
           echo "This job reperesents a failure stage"
-          exit 1
