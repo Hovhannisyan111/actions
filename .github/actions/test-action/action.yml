@@ -1,0 +1,12 @@
+#.github/actions/test-action/action.yml
+
+name: "My Custom Action"
+description: "A custom action for demonstration"
+inputs:
+  example-input:
+    description: "An example input for the action"
+    required: true
+    default: "Hello world"
+runs:
+  using: "node16"
+  main: "index.js"
