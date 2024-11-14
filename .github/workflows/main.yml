@@ -18,7 +18,7 @@ jobs:
       - name: Step 3 - Set up JDK 
         uses: actions/setup-java@v1
         with: 
-        java-version: 1.8
+          java-version: 1.8
 
       - name: Step 4 - Build Jakarta web app with Maven
         run: echo mvn -B package --file pom.xml

@@ -1,6 +1,0 @@
-
-jobs:
-  first_job:
-    steps:
-      - name: First step
-        uses: actions/setup-node@v4
