@@ -12,11 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
-        with:
-          path: ./
+        uses: actions/checkout@v4
 
       - name: Run Custom Action
         uses: ././github/actions/test-action
-        with:
-          example-input: "Your Input Here"
