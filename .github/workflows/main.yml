@@ -18,7 +18,8 @@ jobs:
       - name: Step 3 - Set up JDK 
         uses: actions/setup-java@v3
         with: 
-          java-version: '2'
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Step 4 - Build Jakarta web app with Maven
         run: echo mvn -B package --file pom.xml
