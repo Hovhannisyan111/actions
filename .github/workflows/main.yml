@@ -12,6 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: |
+          cd ./.github/actions/test-action
+          npm install
+
       - name: Run My Custom action
         uses: ./.github/actions/test-action
         with:
