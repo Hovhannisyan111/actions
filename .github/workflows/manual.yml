@@ -1,7 +1,7 @@
 name: Manual run
 
 on:
-  - workflow_dispath
+  - workflow_dispatch
 
 jobs:
   print:
