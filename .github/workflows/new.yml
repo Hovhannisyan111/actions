@@ -1,0 +1,10 @@
+name: New
+
+on: workflow_dispatch
+
+jobs:
+  noprint:
+    runs-on: macos-latest
+    steps:
+      - name: Print some
+        run: echo Somethin' here
