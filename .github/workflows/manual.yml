@@ -1,0 +1,11 @@
+name: Manual run
+
+on:
+  - workflow_dispath
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing...
+        run: echo Hello World
