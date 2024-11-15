@@ -9,3 +9,8 @@ jobs:
     steps:
       - name: Printing...
         run: echo Hello World
+
+      - name: Print Lines
+        run: |
+          echo Firsst line
+          echo Second line
