@@ -19,5 +19,5 @@ jobs:
 
       - name: Run My Custom action
         uses: ./.github/actions/test-action
-        with:
-          name: "Arman"
+          #        with:
+          #          name: "Arman"
