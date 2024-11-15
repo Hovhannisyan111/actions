@@ -7,4 +7,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Print some
-        run: echo Somethin' here
+        run: echo Somethin here
