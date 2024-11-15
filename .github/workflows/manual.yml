@@ -12,5 +12,5 @@ jobs:
 
       - name: Print Lines
         run: |
-          echo Firsst line
+          echo First line
           echo Second line
