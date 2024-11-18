@@ -1,0 +1,15 @@
+name: Using NET
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  network:
+    - name: IP address
+      run: ip a
+    - name: installing...
+      run: sudo apt install net-tools
+    - name: testing
+      run: ifconfig
