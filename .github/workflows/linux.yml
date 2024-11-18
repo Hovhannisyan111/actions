@@ -7,9 +7,11 @@ on:
 
 jobs:
   network:
-    - name: IP address
-      run: ip a
-    - name: installing...
-      run: sudo apt install net-tools
-    - name: testing
-      run: ifconfig
+    runs-on: ubuntu-latest
+    steps:
+      - name: IP address
+        run: ip a
+      - name: installing...
+        run: sudo apt install net-tools
+      - name: testing
+        run: ifconfig
