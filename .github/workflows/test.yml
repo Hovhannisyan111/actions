@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
     branches:
       - main
-
-
 jobs:
   print:
     runs-on: ubuntu-latest
