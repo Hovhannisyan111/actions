@@ -1,0 +1,13 @@
+name: Just testing
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo Done
