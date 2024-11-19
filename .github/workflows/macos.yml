@@ -1,0 +1,13 @@
+name: Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mac:
+    runs-on: macos-latest
+    steps:
+      - name: Print
+        run: echo This is macos
