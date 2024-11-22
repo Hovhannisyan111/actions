@@ -13,4 +13,4 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Do nothing
-        run: 
+        run: ls 
