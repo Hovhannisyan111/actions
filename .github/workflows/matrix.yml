@@ -13,3 +13,8 @@ jobs:
             datacenter: "site-a"
           - site: "staging"
             datacenter: "site-b"
+    steps:
+      - name: Print conf
+        run: |
+          echo "Site: ${{ matrix.site }}"
+          echo "Datacenter: ${{ matrix.datacenter }}"
