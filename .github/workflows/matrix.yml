@@ -1,4 +1,4 @@
-name: Shared Matrix
+name: Matrix
 
 on: 
   workflow_dispatch
@@ -6,12 +6,12 @@ on:
 jobs:
   define-matrix:
     runs-on: ubuntu-latest
-      
+
     outputs:
-      colors: ${{ steps.colors.output.colors }}
+      colors: ${{ steps.colors.outputs.colors }}
 
     steps:
-      - name: Define colors
+      - name: Define Colors
         id: colors
         run: |
           echo 'colors=["red", "green", "blue"]' >> "$GITHUB_OUTPUT"
@@ -22,7 +22,6 @@ jobs:
     strategy:
       matrix:
         color: ${{ fromJSON(needs.define-matrix.outputs.colors) }}
-
 
     steps:
       - name: Define Color
@@ -53,5 +52,4 @@ jobs:
 
     - name: Report Color
       run: |
-        cat color
- 
+        cat color 
