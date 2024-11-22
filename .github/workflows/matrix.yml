@@ -1,4 +1,4 @@
-name: Matrix
+name: Shared Matrix
 
 on: 
   workflow_dispatch
