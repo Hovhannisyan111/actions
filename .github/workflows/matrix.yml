@@ -1,15 +1,15 @@
 name: Matrix
 
-on:
+on: 
   workflow_dispatch
 
 jobs:
-  using-matrix:
-    runs-on: ${{ matrix.os }}
+  include:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [10, 12, 13]
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    steps:
-      - name: Print
-        run: echo "This is $RUNNER_OS OS."
+        include:
+          - site: "production"
+            datacenter: "site-a"
+          - site: "staging"
+            datacenter: "site-b"
