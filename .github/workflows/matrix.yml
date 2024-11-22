@@ -1,0 +1,15 @@
+name: Matrix
+
+on:
+  workflow_dispatch
+
+jobs:
+  using-matrix:
+    strategy:
+      matrix:
+        version: [10, 12, 13]
+        os: [ubuntu-latest, windows-latest, mocos-latest]
+        runs-on: ${{ matrix.os }}
+        steps:
+          - name: Print
+            run: echo "This is $RUNNER_OS OS."
