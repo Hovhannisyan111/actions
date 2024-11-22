@@ -5,11 +5,11 @@ on:
 
 jobs:
   using-matrix:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         version: [10, 12, 13]
         os: [ubuntu-latest, windows-latest, mocos-latest]
-        runs-on: ${{ matrix.os }}
-        steps:
-          - name: Print
-            run: echo "This is $RUNNER_OS OS."
+    steps:
+      - name: Print
+        run: echo "This is $RUNNER_OS OS."
