@@ -1,17 +1,25 @@
 name: deploy
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu_latest
+    name: Deploy to github pages
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Deploy to Github pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/deploy-pages@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          branch: gh-pages
+          folder: ./
