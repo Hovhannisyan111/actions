@@ -1,4 +1,3 @@
 GitHub Actions
 
-Status of Last Deployment:<br>
-<img src="https://github.com/Hovhannisyan111/actions/workflows/deploy/badge.svg" alt="Status of Last Deployment"><br>
+[![pages-build-deployment](https://github.com/Hovhannisyan111/actions/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Hovhannisyan111/actions/actions/workflows/pages/pages-build-deployment)
