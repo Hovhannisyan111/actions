@@ -1,0 +1,26 @@
+name: Deploy HTML to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+        with:
+          branch: gh-pages  # The branch to deploy to (default is 'gh-pages')
+          folder: ./
