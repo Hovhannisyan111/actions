@@ -3,7 +3,7 @@ name: Error Handling
 on:
   push:
     branches:
-      - main:
+      - main
 
 jobs:
   handling:
