@@ -1,0 +1,30 @@
+name: Error Handling
+
+on:
+  push:
+    branches:
+      - main:
+
+jobs:
+  handling:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate a successful task
+        run: |
+          echo "This task will succeed"
+
+      - name: Simulate a failing task
+        run: |
+          echo "This task will fail"
+          exit 1
+        continue-on-erroe: true
+
+      - name: Task after failure 
+        run: |
+          echo "This task runs even if the previous one failed"
+
+      - name: Final Task
+        run: echo Final task that runs after everything
