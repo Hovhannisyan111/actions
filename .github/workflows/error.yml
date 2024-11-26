@@ -1,13 +1,15 @@
-name: Error Handling
+name: Continue on Error Workflow
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  handling:
+  example-job:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -15,16 +17,18 @@ jobs:
       - name: Simulate a successful task
         run: |
           echo "This task will succeed"
-
+        
       - name: Simulate a failing task
         run: |
           echo "This task will fail"
           exit 1
         continue-on-error: true
 
-      - name: Task after failure 
+      - name: Task after failure (continues despite previous failure)
         run: |
           echo "This task runs even if the previous one failed"
 
       - name: Final Task
-        run: echo Final task that runs after everything
+        run: |
+          echo "Final task that runs after everything"
+
