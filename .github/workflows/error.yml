@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "This task will fail"
           exit 1
-        continue-on-erroe: true
+        continue-on-error: true
 
       - name: Task after failure 
         run: |
