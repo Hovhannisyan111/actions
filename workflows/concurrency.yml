@@ -1,0 +1,32 @@
+name: Concurrency
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  example-job:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display Github context
+        run: |
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Run ID: ${{ github.run_id }}"
+
+      - name: Simulate a task
+        run: |
+          echo "Simulating a long-running task..."
+          sleep 60
+
+      - name: Task Complete
+        run: echo "Task completed successfully!"
