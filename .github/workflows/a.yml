@@ -1,8 +1,0 @@
-on: pull_request
-
-jobs:
-  sdf:
-    runs-on: ubuntu-latest
-    steps:
-      - name: ad
-        run: ls
