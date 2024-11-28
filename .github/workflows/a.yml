@@ -1,8 +1,16 @@
-on: pull_request
+name: Env
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  sdf:
+  env-menv:
     runs-on: ubuntu-latest
     steps:
-      - name: ad
-        run: ls
+      env:
+        MY_ENV: action
+      - name: print
+        run: echo ${{ env.MY_ENV }}
+
